@@ -15,7 +15,7 @@ def new_post_page(driver):
     return NewPostPage(driver)
 
 
-def test_post_creation(new_post_page, home_page, test_logger):
+def post_creation(new_post_page, home_page, test_logger):
     home_page.start_a_new_post()
     post_data_file_path = config.get("FileLocations", "post_data_file_path")
     df = read_excel_data(post_data_file_path, "post_data")
